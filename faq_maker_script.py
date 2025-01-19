@@ -88,5 +88,5 @@ def display_faq(faq):
 
 if __name__ == "__main__":
     topic = input("Enter a topic: ")
-    faq = generate_faq(topic, subreddit="learnpython", limit=50)
+    faq = generate_faq(topic, subreddit="all", limit=50)
     display_faq(faq)
