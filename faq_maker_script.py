@@ -55,7 +55,7 @@ def get_best_answer(comments):
     return best_comment['body']
 
 def summarize_text(text):
-    summarizer = pipeline('summarization')
+    summarizer = pipeline('summarization', model='sshleifer/distilbart-cnn-12-6')
     if len(text.split()) < 50:  # Skip short comments
         return text
     return summarizer(text, max_length=50, min_length=25, do_sample=False)[0]['summary_text']
